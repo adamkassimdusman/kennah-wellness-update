@@ -1,0 +1,227 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-teal: #094454;
+    --brand-teal-dark: #062f3a;
+    --brand-teal-light: #0d5d73;
+    --brand-sage: #75ADB2;
+    --brand-sage-light: #94c3c7;
+    --brand-cream: #F4F6F0;
+    --brand-light-green: #e8f5d3;
+    --brand-green-accent: #3ca200;
+    --brand-dark: #191919;
+    --brand-gray: #555555;
+    --brand-border: #e2e8f0;
+  }
+
+  body {
+    font-family: 'Parkinsans', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #191919;
+    background-color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Exact font sizes from live https://kenahwellness.com/ Elementor post-4.css & post-17.css */
+  h1 {
+    font-family: 'Outfit', 'Archivo', sans-serif;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 1.2em;
+    letter-spacing: 0px;
+  }
+
+  h2 {
+    font-family: 'Outfit', 'Archivo', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.25em;
+    letter-spacing: 0px;
+  }
+
+  h3 {
+    font-family: 'Outfit', 'Archivo', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.3em;
+  }
+
+  h4 {
+    font-family: 'Outfit', 'Archivo', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.35em;
+  }
+
+  h5 {
+    font-family: 'Outfit', 'Archivo', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4em;
+  }
+
+  h6 {
+    font-family: 'Outfit', 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.7em;
+  }
+
+  @media (max-width: 1024px) {
+    h1 { font-size: 36px; }
+    h2 { font-size: 30px; }
+    h3 { font-size: 23px; }
+    h4 { font-size: 19px; }
+  }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 27px; }
+    h2 { font-size: 23px; }
+    h3 { font-size: 19px; }
+    h4 { font-size: 17px; }
+    body { font-size: 15px; }
+  }
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-parkinsans {
+  font-family: 'Parkinsans', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-archivo {
+  font-family: 'Archivo', sans-serif;
+}
+
+/* Custom Kenah Wellness Colors */
+.bg-brand-teal {
+  background-color: #094454;
+}
+
+.bg-brand-teal-dark {
+  background-color: #062f3a;
+}
+
+.text-brand-teal {
+  color: #094454;
+}
+
+.border-brand-teal {
+  border-color: #094454;
+}
+
+.bg-brand-sage {
+  background-color: #75ADB2;
+}
+
+.hover\:bg-brand-sage:hover {
+  background-color: #75ADB2;
+}
+
+.text-brand-sage {
+  color: #75ADB2;
+}
+
+.bg-brand-cream {
+  background-color: #F4F6F0;
+}
+
+.text-brand-cream {
+  color: #F4F6F0;
+}
+
+.bg-brand-light-green {
+  background-color: #e8f5d3;
+}
+
+.bg-brand-green {
+  background-color: #3ca200;
+}
+
+.text-brand-green {
+  color: #3ca200;
+}
+
+/* Button style matching original theme: font-size 15px/16px, padding 15px 30px */
+.btn-kenah-primary {
+  background-color: #75ADB2;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-kenah-primary:hover {
+  background-color: #094454;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-kenah-outline {
+  background-color: #ffffff;
+  color: #094454;
+  border: 1.5px solid #094454;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-kenah-outline:hover {
+  background-color: #094454;
+  color: #ffffff;
+}
+
+.btn-kenah-white {
+  background-color: #ffffff;
+  color: #094454;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-kenah-white:hover {
+  background-color: #75ADB2;
+  color: #000000;
+}
+
+/* Section Kicker */
+.section-kicker {
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.7em;
+  color: #75ADB2;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}

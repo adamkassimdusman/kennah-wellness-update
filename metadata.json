@@ -1,0 +1,6 @@
+{
+  "name": "Kenah Wellness Services",
+  "description": "Kenah Wellness Services provides quality Home Care and Pennsylvania ODP Waiver Services—including in-home respite, out-of-home respite, HAB services, and Community Participation Support (CPS) under the Consolidated Waiver—in Allison Park and Pittsburgh, PA.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
