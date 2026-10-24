@@ -41,4 +41,5 @@ jobs:
           port: 21
           local-dir: ./dist/
           server-dir: /
+          state-name: .ftp-deploy-production-sync-state.json
           dangerous-clean-slate: false
