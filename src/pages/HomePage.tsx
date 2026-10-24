@@ -95,7 +95,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           transition={{ duration: 10, ease: 'easeOut' }}
         >
           <img
-            src="/images/side-view-smiley-nurse-patient-scaled.jpg"
+            src={`${import.meta.env.BASE_URL}images/side-view-smiley-nurse-patient-scaled.jpg`}
             alt="Compassionate home caregiver with client"
             className="w-full h-full object-cover object-top lg:object-center opacity-35 mix-blend-luminosity"
           />
@@ -174,7 +174,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-4/3 lg:aspect-auto lg:h-[480px]">
                 <img
-                  src="/images/african-social-worker-taking-care-senior-woman-scaled.jpg"
+                  src={`${import.meta.env.BASE_URL}images/african-social-worker-taking-care-senior-woman-scaled.jpg'}
                   alt="Caregiver taking care of senior"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-103"
                 />
@@ -587,7 +587,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <img
-                      src="/images/Google_Favicon_2025.svg_-150x150.png"
+                      src={`${import.meta.env.BASE_URL}images/Google_Favicon_2025.svg_-150x150.png'}
                       alt="Google Reviews"
                       className="w-6 h-6 object-contain"
                     />
