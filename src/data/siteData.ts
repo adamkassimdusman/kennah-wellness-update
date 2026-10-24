@@ -130,7 +130,7 @@ export const SERVICES: ServiceItem[] = [
     legacySlugs: ['house-cleaning'],
     title: 'Personal Care',
     shortDesc: 'At Kenah Wellness Services, we understand that many seniors want to remain independent at home, but daily routines can sometimes become challenging. Our personal care services are designed to provide compassionate, respectful assistance with essential activities of daily living (ADLs), ensuring your loved one feels safe, comfortable, and confident at home.',
-    image: '/images/jomarc-nicolai-cala-i-Bkol8fxBY-unsplash-1024x576.jpg',
+    image: `${import.meta.env.BASE_URL}images/jomarc-nicolai-cala-i-Bkol8fxBY-unsplash-1024x576.jpg`,
     features: [
       'Bathing and Shower Assistance',
       'Grooming and Hygiene',
@@ -197,7 +197,7 @@ export const SERVICES: ServiceItem[] = [
     legacySlugs: ['office-cleaning'],
     title: 'Senior Care',
     shortDesc: 'At Kenah Wellness Services, we recognize that every senior deserves care that goes beyond the basics. Our senior care services are designed to support the whole person—meeting not just physical needs, but also emotional well-being and social connection. By providing comprehensive, personalized care, we help older adults in Pittsburgh, Allison Park, and surrounding communities live with dignity, comfort, and joy in their own homes.',
-    image: '/images/towfiqu-barbhuiya-T_yNRLnYau8-unsplash-1024x683.jpg',
+    image: `${import.meta.env.BASE_URL}images/towfiqu-barbhuiya-T_yNRLnYau8-unsplash-1024x683.jpg`,
     features: [
       'Physical Support',
       'Emotional Care',
@@ -388,7 +388,7 @@ export const SERVICES: ServiceItem[] = [
     legacySlugs: ['post-construction-cleaning'],
     title: 'Dementia Care Support',
     shortDesc: 'Caring for a loved one with Alzheimer’s disease or another form of dementia requires patience, compassion, and specialized knowledge. At Kenah Wellness Services, we provide dementia care support that focuses on creating a safe, structured, and understanding environment for individuals while giving families peace of mind.',
-    image: '/images/annabel-podevyn-fUBZHfDAVmc-unsplash-1024x683.jpg',
+    image: `${import.meta.env.BASE_URL}images/annabel-podevyn-fUBZHfDAVmc-unsplash-1024x683.jpg`,
     features: [
       'Safety and Supervision',
       'Memory and Cognitive Support',
@@ -446,7 +446,7 @@ export const SERVICES: ServiceItem[] = [
     legacySlugs: ['recurring-cleaning'],
     title: 'Companionship Care',
     shortDesc: 'Loneliness and isolation are among the most common challenges seniors face, especially when living alone or away from family. At Kenah Wellness Services, our companionship care focuses on providing meaningful social interaction, emotional support, and a sense of connection.',
-    image: '/images/junior-reis-PRphbN8vPH4-unsplash-1024x683.jpg',
+    image: `${import.meta.env.BASE_URL}images/junior-reis-PRphbN8vPH4-unsplash-1024x683.jpg`,
     features: [
       'Social Interaction',
       'Emotional Support',
@@ -505,7 +505,7 @@ export const SERVICES: ServiceItem[] = [
     legacySlugs: ['specialized-support'],
     title: 'Specialized Support',
     shortDesc: 'At Kenah Wellness Services, we know that every individual and family has unique needs when it comes to caring for an aging loved one. That’s why we offer specialized support services — additional assistance designed to make life easier, safer, and more manageable for seniors and their families.',
-    image: '/images/steven-hwg-zBsdRTHIIm4-unsplash-1024x683.jpg',
+    image: `${import.meta.env.BASE_URL}images/steven-hwg-zBsdRTHIIm4-unsplash-1024x683.jpg`,
     features: [
       'Chronic Condition Care',
       'Disability Support',
@@ -567,7 +567,7 @@ export const SERVICES: ServiceItem[] = [
     legacySlugs: ['additional-services'],
     title: 'Additional Services',
     shortDesc: 'At Kenah Wellness Services, we know that quality care goes beyond the basics. Every individual has unique needs, and we believe in supporting not just daily living, but overall comfort, independence, and happiness. That’s why, in addition to our core home care services, we proudly provide specialized additional services designed to enrich the lives of seniors and their families.',
-    image: '/images/treesan-Ynj7J6iSWv4-unsplash-1024x576.jpg',
+    image: '${import.meta.env.BASE_URL}images/treesan-Ynj7J6iSWv4-unsplash-1024x576.jpg',
     features: [
       'Light Housekeeping',
       'Meal Preparation',
@@ -813,7 +813,7 @@ export const ODP_SERVICES: OdpServiceItem[] = [
     shortTitle: 'Community Participation (CPS)',
     tagline: 'Meaningful community inclusion, social relationships, and civic engagement.',
     category: 'Community Inclusion & Engagement',
-    image: '/images/treesan-Ynj7J6iSWv4-unsplash-1024x576.jpg',
+    image: '${import.meta.env.BASE_URL}images/treesan-Ynj7J6iSWv4-unsplash-1024x576.jpg',
     shortDesc: 'Connecting individuals with inclusive community activities, volunteering, recreation, and social networks tailored to their personal passions and choices.',
     overview: 'Community Participation Support (CPS) provides opportunities for individuals to explore their interests, engage in community life, and build meaningful relationships alongside community members without disabilities. We believe everyone deserves to be an active, valued member of their neighborhood. CPS fosters social, educational, and pre-vocational growth through fully integrated community activities.',
     keyDifferenceOrFocus: 'Focus on Community Connection & Inclusion: Staff accompany individuals out into local neighborhoods, cultural centers, parks, libraries, volunteer groups, and businesses, empowering them to pursue hobbies, develop civic roles, and participate in authentic community life.',
