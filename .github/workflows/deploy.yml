@@ -1,4 +1,3 @@
-
 name: Deploy Kenah Wellness preview
 
 on:
@@ -31,6 +30,8 @@ jobs:
         run: bun install --frozen-lockfile
 
       - name: Build website
+        env:
+          VITE_BASE: /github-preview/
         run: bun run build
 
       - name: Upload preview to Namecheap
