@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube, Linkedin, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { COMPANY_INFO, SERVICES } from '../data/siteData';
+import { getImagePath } from '../utils/imagePath';
 
 interface FooterProps {
   onNavigate: (path: string) => void;
@@ -62,7 +63,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="space-y-5">
             <div className="bg-white/95 rounded-xl p-3 inline-block">
               <img
-                src="/images/WhatsApp-Image-2025-09-30-at-19.08.44.jpeg"
+                src={getImagePath('/images/WhatsApp-Image-2025-09-30-at-19.08.44.jpeg')}
                 alt="Kenah Wellness Services"
                 className="h-10 w-auto object-contain"
                 onError={(e) => {

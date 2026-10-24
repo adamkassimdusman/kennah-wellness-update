@@ -35,10 +35,19 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  const rawBase = import.meta.env.BASE_URL || '/';
+  const basePath = rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
+
   const navigate = (path: string) => {
-    if (path !== currentPath) {
-      window.history.pushState({}, '', path);
-      setCurrentPath(path);
+    // If path is a hash or external, use as is; otherwise prepend basePath if not already present
+    const targetUrl =
+      path.startsWith('#') || path.startsWith('http') || !basePath || path.startsWith(basePath)
+        ? path
+        : `${basePath}${path.startsWith('/') ? path : `/${path}`}`;
+
+    if (targetUrl !== currentPath) {
+      window.history.pushState({}, '', targetUrl);
+      setCurrentPath(targetUrl);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -46,9 +55,14 @@ export default function App() {
   // Match routes
   const renderContent = () => {
     // Normalise path (trim trailing slash unless root)
-    const normalized = currentPath.length > 1 && currentPath.endsWith('/')
+    let normalized = currentPath.length > 1 && currentPath.endsWith('/')
       ? currentPath.slice(0, -1)
       : currentPath;
+
+    // Strip subfolder basePath if present for route matching
+    if (basePath && normalized.startsWith(basePath)) {
+      normalized = normalized.slice(basePath.length) || '/';
+    }
 
     if (normalized === '/' || normalized === '') {
       return <HomePage onNavigate={navigate} />;
@@ -128,9 +142,14 @@ export default function App() {
     return <HomePage onNavigate={navigate} />;
   };
 
+  let activePath = currentPath;
+  if (basePath && activePath.startsWith(basePath)) {
+    activePath = activePath.slice(basePath.length) || '/';
+  }
+
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900 font-sans antialiased">
-      <Header currentPath={currentPath} onNavigate={navigate} />
+      <Header currentPath={activePath} onNavigate={navigate} />
       <main className="flex-1 w-full">{renderContent()}</main>
       <Footer onNavigate={navigate} />
     </div>

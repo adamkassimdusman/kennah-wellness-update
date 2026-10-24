@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { ShieldCheck, Heart, Users, Award, CheckCircle2, ArrowRight, FileCheck, Sparkles, Home, Compass } from 'lucide-react';
 import { CORE_VALUES, COMPANY_INFO } from '../data/siteData';
+import { getImagePath } from '../utils/imagePath';
 
 interface AboutPageProps {
   onNavigate: (path: string) => void;
@@ -109,7 +110,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl aspect-4/3 bg-slate-100">
                 <img
-                  src="/images/african-social-worker-taking-care-senior-woman-scaled.jpg"
+                  src={getImagePath('/images/african-social-worker-taking-care-senior-woman-scaled.jpg')}
                   alt="Kenah Wellness caregiver with client"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-103"
                 />

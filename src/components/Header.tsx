@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Phone, ChevronDown, Menu, X, ArrowRight, Check, Sparkles } from 'lucide-react';
 import { COMPANY_INFO, SERVICES, ODP_SERVICES } from '../data/siteData';
+import { getImagePath } from '../utils/imagePath';
 
 interface HeaderProps {
   currentPath: string;
@@ -120,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
               aria-label="Kenah Wellness Services Home"
             >
               <img
-                src="/images/WhatsApp-Image-2025-09-30-at-19.08.44.jpeg"
+                src={getImagePath('/images/WhatsApp-Image-2025-09-30-at-19.08.44.jpeg')}
                 alt="Kenah Wellness Services"
                 className="h-12 sm:h-14 w-auto object-contain"
                 onError={(e) => {

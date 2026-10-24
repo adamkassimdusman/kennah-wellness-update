@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, CheckCircle2, MessageSquarePlus, X } from 'lucide-react';
 import { TESTIMONIALS, TestimonialItem } from '../data/siteData';
+import { getImagePath } from '../utils/imagePath';
 
 interface ReviewsPageProps {
   onNavigate: (path: string) => void;
@@ -81,7 +82,7 @@ export const ReviewsPage: React.FC<ReviewsPageProps> = ({ onNavigate }) => {
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <img
-                      src="/images/Google_Favicon_2025.svg_-150x150.png"
+                      src={getImagePath('/images/Google_Favicon_2025.svg_-150x150.png')}
                       alt="Google Reviews"
                       className="w-6 h-6 object-contain"
                     />
